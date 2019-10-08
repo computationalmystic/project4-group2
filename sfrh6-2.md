@@ -8,9 +8,9 @@ The link to my group's design document is listed below
 
 ## Here is a starting list of some of the classes that would be implemented in this system
 
-1. **User class**
+### 1. **User class**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * firstName
 
@@ -26,9 +26,9 @@ The link to my group's design document is listed below
 
 * Logout
 
-2. **Student Class extends User**
+### 2. **Student Class extends User**
 
-###### _Class fields_
+###### _Class fields_(add field types)
 
 * pawprint
 
@@ -42,9 +42,9 @@ The link to my group's design document is listed below
 
 * UploadFile
 
-3. **TeachingAssistant extends User**
+### 3. **TeachingAssistant extends User**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * pawprint
 
@@ -66,9 +66,9 @@ The link to my group's design document is listed below
 
 * CollectSubmissions
 
-4. **Course**
+### 4. **Course**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * courseCode
 
@@ -80,9 +80,9 @@ The link to my group's design document is listed below
 
 ##### _Class methods(empty)_
 
-5. **Assignment**
+### 5. **Assignment**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * assignmentNumber
 
@@ -94,9 +94,9 @@ The link to my group's design document is listed below
 
 * ViewAssignment
 
-6. **Professor extends User**
+### 6. **Professor extends User**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * teachingAssitantList
 
@@ -134,9 +134,9 @@ The link to my group's design document is listed below
 
 * ListStudents
 
-7. **Submission**
+### 7. **Submission**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * submissionID
 
@@ -148,9 +148,9 @@ The link to my group's design document is listed below
 
 ##### _Class Methods(empty)_
 
-8. **Administrator extends User**
+### 8. **Administrator extends User**
 
-##### _Class fields_
+##### _Class fields_(add field types)
 
 * adminID
 
