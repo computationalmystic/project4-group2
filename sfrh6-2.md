@@ -24,8 +24,11 @@ The link to my group's design document is listed below
 
 * Login(string username, stirng password)
 	> Create web server
+
 	> Create database for users of the system
+
 	> Set up workflow for 2 factor authentication using either a users phone number or email
+
 	> Create a UI with text fields for password and username and a login button
 
 * Logout()
@@ -116,14 +119,23 @@ The link to my group's design document is listed below
 
 * CreateAssignment
 	> Set up web server
+
 	> Set up database for holding assignments
+
 	> Add restrictions to server regarding who can and can't edit/add/remove assignments
+
 	> Create workflow for removing an assignment
+
 	> Add alert when removing assignment to confirm this action is the proposed action
+
 	> Create UI for editing an exisiting assignment; this includes making edit and delete buttons for an assignment
+
 	> Define stored procedures for when an assignment is removed or updated so students and TAs are notified and the changes show in their list of assignments
+
 	> Create subsystem for creating a new assignment
+
 	> Define a stored procedure to notify students and TAs when a new assignment has been created
+
 	> Set up UI for adding a new assignment, where the assignment name, details, accepted file types, etc. are properly defined
 
 * DeleteAssignment
