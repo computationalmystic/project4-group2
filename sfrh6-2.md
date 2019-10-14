@@ -8,6 +8,33 @@ The link to my group's design document is listed below
 
 ## Here is a starting list of some of the classes that would be implemented in this system
 
+#### For the Entity Relationship Diagram
+	> Databases to hold the system's users, the assignments created, and submissions
+
+	> Create stored procedure for notifying students when an assignment has been graded
+
+	> Create stored procedure for notifying students and TAs when a change has been made to a course or assignment
+
+	> Create a stored procedure for notifying students and TAs when an assignment has been created
+	
+	> A configured web server
+
+	> UI for users to login and logout
+
+	> UI for professors to add, delete, edit assignments and courses
+
+	> UI for professors and TAs to search students
+
+	> UI for admins to delete and add professors to the database
+
+	> UI for admins to search users within the database
+
+	> UI for TAs to grade assignments
+
+	> UI for students to submit assignments
+
+	> UI for students, professors, and TAs to view assignments
+
 ### 1. **User class**
 
 ##### _Class fields_(add field types)
@@ -32,34 +59,35 @@ The link to my group's design document is listed below
 	> Create a UI with text fields for password and username and a login button
 
 * Logout()
+	> Create logout button
 
-### 2. **Student Class extends User**
+### 2. **Student Class : User**
 
 ###### _Class fields_(add field types)
 
-* pawprint
+* pawprint : string
 
-* studentID
+* studentID : long int
 
-* courseList
+* courseList : List<Course> 
 
-* assignmentList
+* assignmentList : List<Assignment>
 
 ###### _Class methods_
 
 * UploadFile()
 
-### 3. **TeachingAssistant extends User**
+### 3. **TeachingAssistant : User**
 
 ##### _Class fields_(add field types)
 
-* pawprint
+* pawprint : string
 
-* studentID
+* studentID : long int
 
-* courseList
+* courseList : List<Course>
 
-* professorList
+* professorList : List<Professor>
 
 ##### _Class methods_
 
@@ -77,13 +105,13 @@ The link to my group's design document is listed below
 
 ##### _Class fields_(add field types)
 
-* courseCode
+* courseCode : string
 
-* courseName
+* courseName : string
 
-* assignmentList
+* assignmentList : List<Assignment>
 
-* studentList
+* studentList : List<Student>
 
 ##### _Class methods(empty)_
 
@@ -91,11 +119,11 @@ The link to my group's design document is listed below
 
 ##### _Class fields_(add field types)
 
-* assignmentNumber
+* assignmentNumber : int
 
-* assignmentName
+* assignmentName : string
 
-* assignmentDetails
+* assignmentDetails : string
 
 ##### _Class methods_
 
@@ -105,9 +133,9 @@ The link to my group's design document is listed below
 
 ##### _Class fields_(add field types)
 
-* teachingAssitantList
+* teachingAssitantList : List<TeachingAssistant>
 
-* courseList
+* courseList : List<Course>
 
 ##### _Class methods_
 
@@ -117,76 +145,76 @@ The link to my group's design document is listed below
 
 * AddTA()
 
-* CreateAssignment
+* CreateAssignment()
 	> Set up web server
 
 	> Set up database for holding assignments
 
-	> Add restrictions to server regarding who can and can't edit/add/remove assignments
-
-	> Create workflow for removing an assignment
-
-	> Add alert when removing assignment to confirm this action is the proposed action
-
-	> Create UI for editing an exisiting assignment; this includes making edit and delete buttons for an assignment
-
-	> Define stored procedures for when an assignment is removed or updated so students and TAs are notified and the changes show in their list of assignments
+	> Add restrictions regarding who can and can't add assignments
 
 	> Create subsystem for creating a new assignment
 
 	> Define a stored procedure to notify students and TAs when a new assignment has been created
 
-	> Set up UI for adding a new assignment, where the assignment name, details, accepted file types, etc. are properly defined
+	> Set up UI for adding a new assignment; need elements where the assignment name, details, accepted file types, etc. can be properly defined
 
-* DeleteAssignment
+* DeleteAssignment()
+	> Add restrictions regarding who can and can't remove assignments
 
-* EditAssignment
+	> Create a stored procedure to notify students and TAs when an assignment has been removed
 
-* EditCourse
+* EditAssignment()
+	> Add restrictions regarding who and who can't edit an assignment
 
-* AddCourse
+	> Create an edit button that is present for users with editing capablities
+	
+	> Create a stored procedure that will notify students and TAs when a change to an assignment has been made
 
-* RemoveCourse
+* EditCourse()
 
-* ViewCourse
+* AddCourse()
 
-* ListCourses
+* RemoveCourse()
 
-* RemoveStudent
+* ViewCourse()
 
-* AddStudent
+* ListCourses()
 
-* SearchStudent
+* RemoveStudent()
 
-* ListStudents
+* AddStudent()
+
+* SearchStudent()
+
+* ListStudents()
 
 ### 7. **Submission**
 
 ##### _Class fields_(add field types)
 
-* submissionID
+* submissionID : int
 
-* pawprint
+* student : User
 
-* dateTime
+* dateTime : Date
 
-* comments
+* comments : string
 
 ##### _Class Methods(empty)_
 
-### 8. **Administrator extends User**
+### 8. **Administrator : User**
 
 ##### _Class fields_(add field types)
 
-* adminID
+* adminID : int
 
 ##### _Class methods_
 
-* RemoveProfessor
+* RemoveProfessor()
 
-* AddProfessor
+* AddProfessor()
 
-* SearchProfessor
+* SearchProfessor()
 
-* ListProfessors
+* ListProfessors()
 
