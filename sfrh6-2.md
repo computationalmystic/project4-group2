@@ -9,35 +9,36 @@ The link to my group's design document is listed below
 ## Here is a starting list of some of the classes that would be implemented in this system
 
 #### For the Entity Relationship Diagram
-	> Databases to hold the system's users, the assignments created, and submissions
 
-	> Create stored procedure for notifying students when an assignment has been graded
+        > Databases to hold the system's users, the assignments created, and submissions
 
-	> Create stored procedure for notifying students and TAs when a change has been made to a course or assignment
+        > Create stored procedure for notifying students when an assignment has been graded
 
-	> Create a stored procedure for notifying students and TAs when an assignment has been created
-	
-	> A configured web server
+        > Create stored procedure for notifying students and TAs when a change has been made to a course or assignment
 
-	> UI for users to login and logout
+        > Create a stored procedure for notifying students and TAs when an assignment has been created
 
-	> UI for professors to add, delete, edit assignments and courses
+        > Need a web server
 
-	> UI for professors and TAs to search students
+        > UI for users to login and logout
 
-	> UI for admins to delete and add professors to the database
+        > UI for professors to add, delete, edit assignments and courses
 
-	> UI for admins to search users within the database
+        > UI for professors and TAs to search students
 
-	> UI for TAs to grade assignments
+        > UI for admins to delete and add professors to the database
 
-	> UI for students to submit assignments
+        > UI for admins to search users within the database
 
-	> UI for students, professors, and TAs to view assignments
+        > UI for TAs to grade assignments
+
+        > UI for students to submit assignments
+
+        > UI for students, professors, and TAs to view assignments
 
 ### 1. **User class**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * firstName : string
 
@@ -45,11 +46,11 @@ The link to my group's design document is listed below
 
 * email : string
 
-* password : strng
+* password : string
 
-##### _Class methods_
+###### _Class methods_
 
-* Login(string username, stirng password)
+* Login()
 	> Create web server
 
 	> Create database for users of the system
@@ -63,13 +64,13 @@ The link to my group's design document is listed below
 
 ### 2. **Student Class : User**
 
-###### _Class fields_(add field types)
+###### _Class fields_
 
 * pawprint : string
 
-* studentID : long int
+* studentID : int
 
-* courseList : List<Course> 
+* courseList : List<Course>
 
 * assignmentList : List<Assignment>
 
@@ -79,17 +80,17 @@ The link to my group's design document is listed below
 
 ### 3. **TeachingAssistant : User**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * pawprint : string
 
-* studentID : long int
+* studentID : int
 
 * courseList : List<Course>
 
 * professorList : List<Professor>
 
-##### _Class methods_
+###### _Class methods_
 
 * ViewSubmission()
 
@@ -103,21 +104,21 @@ The link to my group's design document is listed below
 
 ### 4. **Course**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * courseCode : string
 
 * courseName : string
 
-* assignmentList : List<Assignment>
+* assignmentList List<Assignment>
 
 * studentList : List<Student>
 
-##### _Class methods(empty)_
+###### _Class methods(empty)_
 
 ### 5. **Assignment**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * assignmentNumber : int
 
@@ -125,19 +126,19 @@ The link to my group's design document is listed below
 
 * assignmentDetails : string
 
-##### _Class methods_
+###### _Class methods_
 
 * ViewAssignment()
 
 ### 6. **Professor : User**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * teachingAssitantList : List<TeachingAssistant>
 
 * courseList : List<Course>
 
-##### _Class methods_
+###### _Class methods_
 
 * ViewTAs()
 
@@ -190,7 +191,7 @@ The link to my group's design document is listed below
 
 ### 7. **Submission**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * submissionID : int
 
@@ -200,15 +201,15 @@ The link to my group's design document is listed below
 
 * comments : string
 
-##### _Class Methods(empty)_
+###### _Class Methods(empty)_
 
-### 8. **Administrator : User**
+### 8. **Administrator extends User**
 
-##### _Class fields_(add field types)
+###### _Class fields_
 
 * adminID : int
 
-##### _Class methods_
+###### _Class methods_
 
 * RemoveProfessor()
 
