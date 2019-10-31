@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Augur | Repo Statistics</title>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <!-- tabs for viewing information pertaining to the various visuals -->
+            <!-- each tab calls a function that decides what to show -->
+        <div class="tab">
+          <button id="info" type="button" onclick="homePage()">Augur Repo Statistics</button>  
+          <button class="tablinks" onclick="showVisual(event, 'polarcontainer')">Top Commiters</button>
+          <button class="tablinks" onclick="showVisual(event, 'timecontainer')">Pull Request Acceptance Rates</button>
+          <button class="tablinks" onclick="showVisual(event, 'barcontainer')">Issue Backlogs</button>
+        </div>
+        <div class="tabcontent" id="polarcontainer" width=100% height=900>
+            <select id="repoGroupSelectOne" class="selectGroup">
+            </select>
+            <br><br>
+            <h2 class="text-center">Repo Groups' Top Commiters</h2>
+        </div>
+        <div class="tabcontent" id="timecontainer">
+            <select id="repoGroupSelectTwo" class="selectGroup">
+            </select>
+            <h2 class="text-center">Repo Groups' Pull Request Acceptance Rates Over Time</h2>
+        </div>
+        <div class="tabcontent" id="barcontainer">
+            <select id="repoGroupSelectThree" class="selectGroup">
+            </select>
+            <h2 class="text-center">Repo Groups' Issue Backlogs</h2>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
